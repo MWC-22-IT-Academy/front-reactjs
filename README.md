@@ -1,6 +1,7 @@
 # Client side
 
 initialized with create react app
+moved to shared IT Academy organization
 
 ## Getting Started with Create React App
 
