@@ -1,7 +1,14 @@
 # Client side
 
 initialized with create react app
-moved to shared IT Academy organization
+
+start the development server:
+
+### `npm start`
+
+start json-server (can modify the port if needed):
+
+### `npx json-server --watch data/db.json --port 8000`
 
 ## Getting Started with Create React App
 

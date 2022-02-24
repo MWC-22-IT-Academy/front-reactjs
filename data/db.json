@@ -1,0 +1,269 @@
+{
+    "fullData": [
+        {
+            "id": 1,
+            "year" : 2021,
+            "monthlyData" : {
+                "perros": {
+                    "acogidosAvg": 79,
+                    "acogidosMonthly": [
+                        {
+                            "month": "Jan",
+                            "num": 46
+                        },
+                        {
+                            "month": "Feb",
+                            "num": 33
+                        },
+                        {
+                            "month": "Mar",
+                            "num": 55
+                        },
+                        {
+                            "month": "Apr",
+                            "num": 54
+                        },
+                        {
+                            "month": "May",
+                            "num": 61
+                        },
+                        {
+                            "month": "Jun",
+                            "num": 66
+                        },
+                        {
+                            "month": "Jul",
+                            "num": 56
+                        },
+                        {
+                            "month": "Aug",
+                            "num": 49
+                        },
+                        {
+                            "month": "Sep",
+                            "num": 74
+                        },
+                        {
+                            "month": "Oct",
+                            "num": 93
+                        },
+                        {
+                            "month": "Nov",
+                            "num": 57
+                        },
+                        {
+                            "month": "Dec",
+                            "num": 68
+                        }
+                    ],
+                    "adoptadosAvg": 27,
+                    "adoptadosMonthly": [
+                        {
+                            "month": "Jan",
+                            "num": 27
+                        },
+                        {
+                            "month": "Feb",
+                            "num": 49
+                        },
+                        {
+                            "month": "Mar",
+                            "num": 26
+                        },
+                        {
+                            "month": "Apr",
+                            "num": 23
+                        },
+                        {
+                            "month": "May",
+                            "num": 25
+                        },
+                        {
+                            "month": "Jun",
+                            "num": 14
+                        },
+                        {
+                            "month": "Jul",
+                            "num": 18
+                        },
+                        {
+                            "month": "Aug",
+                            "num": 14
+                        },
+                        {
+                            "month": "Sep",
+                            "num": 31
+                        },
+                        {
+                            "month": "Oct",
+                            "num": 29
+                        },
+                        {
+                            "month": "Nov",
+                            "num": 33
+                        },
+                        {
+                            "month": "Dec",
+                            "num": 36
+                        }
+                    ]          
+                },
+                "gatos": {
+                    "acogidosAvg": 65,
+                    "acogidosMonthly": [
+                        {
+                            "month": "Jan",
+                            "num": 36
+                        },
+                        {
+                            "month": "Feb",
+                            "num": 37
+                        },
+                        {
+                            "month": "Mar",
+                            "num": 29
+                        },
+                        {
+                            "month": "Apr",
+                            "num": 41
+                        },
+                        {
+                            "month": "May",
+                            "num": 106
+                        },
+                        {
+                            "month": "Jun",
+                            "num": 115
+                        },
+                        {
+                            "month": "Jul",
+                            "num": 101
+                        },
+                        {
+                            "month": "Aug",
+                            "num": 81
+                        },
+                        {
+                            "month": "Sep",
+                            "num": 70
+                        },
+                        {
+                            "month": "Oct",
+                            "num": 84
+                        },
+                        {
+                            "month": "Nov",
+                            "num": 48
+                        },
+                        {
+                            "month": "Dec",
+                            "num": 39
+                        }
+                    ],
+                    "adoptadosAvg": 34,
+                    "adoptadosMonthly":[
+                        {
+                            "month": "Jan",
+                            "num": 21
+                        },
+                        {
+                            "month": "Feb",
+                            "num": 46
+                        },
+                        {
+                            "month": "Mar",
+                            "num": 19
+                        },
+                        {
+                            "month": "Apr",
+                            "num": 14
+                        },
+                        {
+                            "month": "May",
+                            "num": 48
+                        },
+                        {
+                            "month": "Jun",
+                            "num": 47
+                        },
+                        {
+                            "month": "Jul",
+                            "num": 32
+                        },
+                        {
+                            "month": "Aug",
+                            "num": 47
+                        },
+                        {
+                            "month": "Sep",
+                            "num": 58
+                        },
+                        {
+                            "month": "Oct",
+                            "num": 28
+                        },
+                        {
+                            "month": "Nov",
+                            "num": 29
+                        },
+                        {
+                            "month": "Dec",
+                            "num": 27
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": 2,
+            "year" : 2020,
+            "monthlyData" : {
+                "perros": {
+                    "acogidosAvg": 91,
+                    "adoptadosAvg": 42
+                },
+                "gatos": {
+                    "acogidosAvg": 57,
+                    "adoptadosAvg": 32
+                }
+            }
+        },
+        {
+            "id": 3,
+            "year" : 2019,
+            "monthlyData" : {
+                "perros": {
+                    "acogidosAvg": 125,
+                    "adoptadosAvg": 40
+                },
+                "gatos": {
+                    "acogidosAvg": 66,
+                    "adoptadosAvg": 38
+                }
+            }
+        }
+    ],
+    "availableData": [
+        {
+            "id": 1,
+            "year": "2022",
+            "months": ["Jan"]
+        },
+        {
+            "id": 2,
+            "year": "2021",
+            "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        },
+        {
+            "id": 3,
+            "year": "2020",
+            "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        }
+    ], 
+    "lastFullYearAvailable" : [
+        {
+            "id": 1,
+            "year": 2021
+        }
+    ]
+}
