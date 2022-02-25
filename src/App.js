@@ -10,6 +10,12 @@ function App() {
   const [lastYearAvailable, setLastYearAvailable] = useState("");
   const [lastDataAvailable, setLastDataAvailable] = useState("");
   const [availableData, setAvailableData] = useState("");
+  const [selectedPeriod, setSelectedPeriod] = useState({
+    year: "",
+    month: "",
+  });
+  const [dynamicMonthlyData, setDynamicMonthlyData] = useState("");
+  const [dynamicYearlyData, setDynamicYearlyData] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:8000/lastFullYearAvailable/1")
@@ -28,28 +34,69 @@ function App() {
     fetch(uri)
       .then(res => res.json())
       .then(data => {
-        const [
-          {
-            monthlyData: { perros, gatos },
-          },
-        ] = data;
+        const [{ perrosAcogidosAvg, perrosAdoptadosAvg, gatosAcogidosAvg, gatosAdoptadosAvg }] = data;
         setLastDataAvailable([
           {
             type: "Perros acogidos",
-            value: perros.acogidosAvg,
+            value: perrosAcogidosAvg,
           },
           {
             type: "Perros adoptados",
-            value: perros.adoptadosAvg,
+            value: perrosAdoptadosAvg,
           },
-          { type: "Gatos acogidos", value: gatos.acogidosAvg },
-          { type: "Gatos adoptados", value: gatos.adoptadosAvg },
+          { type: "Gatos acogidos", value: gatosAcogidosAvg },
+          { type: "Gatos adoptados", value: gatosAdoptadosAvg },
         ]);
       });
   }, [lastYearAvailable]);
 
+  const handlePeriodChange = e => {
+    const { name, value } = e.target;
+    setSelectedPeriod(prevData => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handlePeriodSubmit = e => {
+    e.preventDefault();
+    const { year, month } = selectedPeriod;
+    const uri = `http://localhost:8000/fullData?year=${year}`;
+    fetch(uri)
+      .then(res => res.json())
+      .then(data => {
+        const partialData = data[0].monthlyData.find(item => item.month === month);
+        setDynamicMonthlyData(partialData);
+        setDynamicYearlyData(data[0].monthlyData);
+      });
+  };
+
   const renderLastData = () => {
     return lastDataAvailable.map((item, i) => <InfoLine key={i} description={item.type} infoText={item.value} />);
+  };
+
+  const renderMonthOptions = () => {
+    const year = selectedPeriod.year;
+    if (!year) {
+      return;
+    }
+    const months = availableData.filter(item => item.year === year)[0].months;
+    return months.map(item => ({
+      value: item,
+      text: item,
+    }));
+  };
+
+  const renderDynamicMonthlyData = () => {
+    const { perrosAcogidos, perrosAdoptados, gatosAcogidos, gatosAdoptados } = dynamicMonthlyData;
+    return (
+      <>
+        <InfoLine description="Perros acogidos" infoText={perrosAcogidos} />
+        <InfoLine description="Perros adoptados" infoText={perrosAdoptados} />
+        <InfoLine description="Gatos acogidos" infoText={gatosAcogidos} />
+        <InfoLine description="Gatos adoptados" infoText={gatosAdoptados} />
+      </>
+    );
   };
 
   return (
@@ -64,19 +111,39 @@ function App() {
       </section>
       <section>
         <SectionTitle text="Get data" />
+        <SectionSubtitle text="Dynamic monthly data" />
         {availableData && (
-          <InputSelect
-            name="years"
-            id="year-select"
-            labelText="Choose a year: "
-            selectValues={availableData.map(item => ({
-              value: item.year,
-              text: item.year,
-            }))}
-          />
+          <form>
+            <InputSelect
+              name="year"
+              id="year-select"
+              labelText="Choose a year: "
+              onChange={handlePeriodChange}
+              value={selectedPeriod.year}
+              selectOptions={availableData.map(item => ({
+                value: item.year,
+                text: item.year,
+              }))}
+            />
+            <InputSelect
+              name="month"
+              id="month-select"
+              labelText="Choose a month: "
+              onChange={handlePeriodChange}
+              value={selectedPeriod.month}
+              selectOptions={renderMonthOptions()}
+            />
+            <button onClick={handlePeriodSubmit}>Get Data</button>
+          </form>
+        )}
+        {dynamicMonthlyData && renderDynamicMonthlyData()}
+        {dynamicYearlyData && (
+          <>
+            <SectionSubtitle text="Yearly adoption trends" />
+            <GraphicChart data={dynamicYearlyData} />
+          </>
         )}
       </section>
-      <GraphicChart />
     </div>
   );
 }

@@ -3,244 +3,114 @@
         {
             "id": 1,
             "year" : 2021,
-            "monthlyData" : {
-                "perros": {
-                    "acogidosAvg": 79,
-                    "acogidosMonthly": [
+            "perrosAcogidosAvg": 79,
+            "perrosAdoptadosAvg": 27,
+            "gatosAcogidosAvg": 65,
+            "gatosAdoptadosAvg": 34,
+            "monthlyData" : [
                         {
                             "month": "Jan",
-                            "num": 46
+                            "perrosAcogidos": 46,
+                            "perrosAdoptados": 27,
+                            "gatosAcogidos": 36,
+                            "gatosAdoptados": 21
                         },
                         {
                             "month": "Feb",
-                            "num": 33
+                            "perrosAcogidos": 33,
+                            "perrosAdoptados": 49,
+                            "gatosAcogidos": 37,
+                            "gatosAdoptados": 46
                         },
                         {
                             "month": "Mar",
-                            "num": 55
+                            "perrosAcogidos": 55,
+                            "perrosAdoptados": 26,
+                            "gatosAcogidos": 29,
+                            "gatosAdoptados": 19
                         },
                         {
                             "month": "Apr",
-                            "num": 54
+                            "perrosAcogidos": 54,
+                            "perrosAdoptados": 23,
+                            "gatosAcogidos": 41,
+                            "gatosAdoptados": 14
                         },
                         {
                             "month": "May",
-                            "num": 61
+                            "perrosAcogidos": 61,
+                            "perrosAdoptados": 25,
+                            "gatosAcogidos": 106,
+                            "gatosAdoptados": 48
                         },
                         {
                             "month": "Jun",
-                            "num": 66
+                            "perrosAcogidos": 66,
+                            "perrosAdoptados": 14,
+                            "gatosAcogidos": 115,
+                            "gatosAdoptados": 47
                         },
                         {
                             "month": "Jul",
-                            "num": 56
+                            "perrosAcogidos": 56,
+                            "perrosAdoptados": 18,
+                            "gatosAcogidos": 101,
+                            "gatosAdoptados": 32
                         },
                         {
                             "month": "Aug",
-                            "num": 49
+                            "perrosAcogidos": 49,
+                            "perrosAdoptados": 14,
+                            "gatosAcogidos": 81,
+                            "gatosAdoptados": 47
                         },
                         {
                             "month": "Sep",
-                            "num": 74
+                            "perrosAcogidos": 74,
+                            "perrosAdoptados": 31,
+                            "gatosAcogidos": 70,
+                            "gatosAdoptados": 58
                         },
                         {
                             "month": "Oct",
-                            "num": 93
+                            "perrosAcogidos": 93,
+                            "perrosAdoptados": 29,
+                            "gatosAcogidos": 84,
+                            "gatosAdoptados": 28
                         },
                         {
                             "month": "Nov",
-                            "num": 57
+                            "perrosAcogidos": 57,
+                            "perrosAdoptados": 33,
+                            "gatosAcogidos": 48,
+                            "gatosAdoptados": 29
                         },
                         {
                             "month": "Dec",
-                            "num": 68
-                        }
-                    ],
-                    "adoptadosAvg": 27,
-                    "adoptadosMonthly": [
-                        {
-                            "month": "Jan",
-                            "num": 27
-                        },
-                        {
-                            "month": "Feb",
-                            "num": 49
-                        },
-                        {
-                            "month": "Mar",
-                            "num": 26
-                        },
-                        {
-                            "month": "Apr",
-                            "num": 23
-                        },
-                        {
-                            "month": "May",
-                            "num": 25
-                        },
-                        {
-                            "month": "Jun",
-                            "num": 14
-                        },
-                        {
-                            "month": "Jul",
-                            "num": 18
-                        },
-                        {
-                            "month": "Aug",
-                            "num": 14
-                        },
-                        {
-                            "month": "Sep",
-                            "num": 31
-                        },
-                        {
-                            "month": "Oct",
-                            "num": 29
-                        },
-                        {
-                            "month": "Nov",
-                            "num": 33
-                        },
-                        {
-                            "month": "Dec",
-                            "num": 36
-                        }
-                    ]          
-                },
-                "gatos": {
-                    "acogidosAvg": 65,
-                    "acogidosMonthly": [
-                        {
-                            "month": "Jan",
-                            "num": 36
-                        },
-                        {
-                            "month": "Feb",
-                            "num": 37
-                        },
-                        {
-                            "month": "Mar",
-                            "num": 29
-                        },
-                        {
-                            "month": "Apr",
-                            "num": 41
-                        },
-                        {
-                            "month": "May",
-                            "num": 106
-                        },
-                        {
-                            "month": "Jun",
-                            "num": 115
-                        },
-                        {
-                            "month": "Jul",
-                            "num": 101
-                        },
-                        {
-                            "month": "Aug",
-                            "num": 81
-                        },
-                        {
-                            "month": "Sep",
-                            "num": 70
-                        },
-                        {
-                            "month": "Oct",
-                            "num": 84
-                        },
-                        {
-                            "month": "Nov",
-                            "num": 48
-                        },
-                        {
-                            "month": "Dec",
-                            "num": 39
-                        }
-                    ],
-                    "adoptadosAvg": 34,
-                    "adoptadosMonthly":[
-                        {
-                            "month": "Jan",
-                            "num": 21
-                        },
-                        {
-                            "month": "Feb",
-                            "num": 46
-                        },
-                        {
-                            "month": "Mar",
-                            "num": 19
-                        },
-                        {
-                            "month": "Apr",
-                            "num": 14
-                        },
-                        {
-                            "month": "May",
-                            "num": 48
-                        },
-                        {
-                            "month": "Jun",
-                            "num": 47
-                        },
-                        {
-                            "month": "Jul",
-                            "num": 32
-                        },
-                        {
-                            "month": "Aug",
-                            "num": 47
-                        },
-                        {
-                            "month": "Sep",
-                            "num": 58
-                        },
-                        {
-                            "month": "Oct",
-                            "num": 28
-                        },
-                        {
-                            "month": "Nov",
-                            "num": 29
-                        },
-                        {
-                            "month": "Dec",
-                            "num": 27
+                            "perrosAcogidos": 68,
+                            "perrosAdoptados": 36,
+                            "gatosAcogidos": 39,
+                            "gatosAdoptados": 27
                         }
                     ]
-                }
-            }
         },
         {
             "id": 2,
             "year" : 2020,
-            "monthlyData" : {
-                "perros": {
-                    "acogidosAvg": 91,
-                    "adoptadosAvg": 42
-                },
-                "gatos": {
-                    "acogidosAvg": 57,
-                    "adoptadosAvg": 32
-                }
-            }
+            "perrosAcogidosAvg": 91,
+            "perrosAdoptadosAvg": 42,
+            "gatosAcogidosAvg": 57,
+            "gatosAdoptadosAvg": 32,
+            "monthlyData" : []
         },
         {
             "id": 3,
             "year" : 2019,
-            "monthlyData" : {
-                "perros": {
-                    "acogidosAvg": 125,
-                    "adoptadosAvg": 40
-                },
-                "gatos": {
-                    "acogidosAvg": 66,
-                    "adoptadosAvg": 38
-                }
-            }
+            "perrosAcogidosAvg": 125,
+            "perrosAdoptadosAvg": 40,
+            "gatosAcogidosAvg": 66,
+            "gatosAdoptadosAvg": 38,
+            "monthlyData" : []
         }
     ],
     "availableData": [

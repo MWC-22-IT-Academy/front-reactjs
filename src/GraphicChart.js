@@ -1,7 +1,7 @@
-import { data } from "./data-perros-gatos";
+//import { data } from "./data-perros-gatos";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from "recharts";
 
-function GraphicChart() {
+function GraphicChart({ data }) {
   return (
     <div>
       <LineChart
@@ -16,12 +16,12 @@ function GraphicChart() {
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
+        <XAxis dataKey="month" />
         <YAxis />
         <Tooltip />
         <Legend />
-        <Line type="monotone" dataKey="perros adoptados" stroke="#8884d8" activeDot={{ r: 8 }} />
-        <Line type="monotone" dataKey="gatos adoptados" stroke="#82ca9d" />
+        <Line type="monotone" dataKey="perrosAdoptados" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="gatosAdoptados" stroke="#82ca9d" />
       </LineChart>
     </div>
   );
